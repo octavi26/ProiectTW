@@ -1,0 +1,554 @@
+@font-face {
+	font-family: 'FacultyGlyphic';
+	src: url('FacultyGlyphic.ttf');
+}
+@font-face {
+	font-family: 'Oswald';
+	src: url('Oswald.ttf');
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+}
+
+body, main {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  z-index: 13;
+	all: unset;
+  color: inherit;
+  text-decoration: inherit;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.image1 {
+  background-image: url("first.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.image1:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0), #2d564f);
+}
+
+.image1 > .interactive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.image1 > .interactive > .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image1 > .interactive >.text > .title {
+  font-family: "FacultyGlyphic";
+  color: white;
+  font-size: 9em;
+  z-index: 13;
+}
+
+.image1 > .interactive >.text > .description {
+  font-family: "FacultyGlyphic";
+  color: white;
+  font-size: 1.8em;
+  z-index: 13;
+}
+
+.buttons {
+  z-index: 13;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.button {
+  z-index: 13;
+	width: 15em;
+  margin: 0;
+	transition: width 1s, background-color .5s, color .5s;
+	/* height: 2.5em; */
+	background-color: rgb(255, 255, 255, 0);
+	border: .3em solid white;
+	margin: 1em;
+	padding: .4em;
+	padding-bottom: .5em;
+  border-radius: 2em;
+
+	font-family: "FacultyGlyphic";
+  font-size: 1em;
+	color: white;
+	text-align: center;
+
+  cursor: pointer;
+}
+
+.button:hover {
+	background-color: white;
+	color: #2d564f;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.header {
+  z-index: 26;
+  position: sticky;
+  height: 3em;
+  top: 0;
+  padding: 10px 16px;
+  border-bottom: .4em solid #24453f;
+  background: #2d564f;
+  color: #f1f1f1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header > .title {
+  font-family: "FacultyGlyphic";
+  font-size: 2em;
+}
+
+.menu {
+  height: 4em;
+  width: 4em;
+  border: 0;
+  padding: 0;
+  border-radius: .5em;
+  background-color: #2d564f;
+  overflow: visible;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.menu:hover {
+  background-color: #24453f;
+}
+
+.dash {
+  height: 10%;
+  width: 80%;
+  background-color: white;
+  border-radius: 1em;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 13;
+  position: absolute;
+  background-color: #2d564f;
+  border-bottom: .4em solid #24453f;
+  width: 12.5%;
+  right: 0%;
+  top: 90%;
+  overflow: hidden;
+
+  font-family: "FacultyGlyphic";
+  color: white;
+  font-size: 1.5em;
+
+  cursor: pointer;
+}
+
+.space {
+  height: 7px;
+}
+
+.menu-button div {
+  width: 40em;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:hover {
+  background-color: #24453f;
+  color: rgb(255, 218, 107); 
+}
+
+.menu:hover .dropdown-content {
+  z-index: -26;
+  display: flex;
+  /*
+  animation-name: dropdown;
+  animation-duration: .5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  */
+}
+
+@keyframes dropdown {
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(0%);}
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.page {
+  background-color: white;
+  padding-top: 5em;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+}
+
+.content {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.image3 {
+  background-image: url("first.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  height: 30em;
+  width: 100%;
+  position: relative;
+  margin-bottom: 4em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image3:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.3);
+}
+
+.image3 > .rectangle {
+  z-index: 13;
+  border: 10px solid white;
+  width: 93%;
+  height: 82%;
+
+  color: white;
+  font-family: "Oswald";
+  text-align: center;
+  font-size: 1.7em;
+  line-height: .7em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image3 > .rectangle > .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  text-align: center;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.image3 > .rectangle > .info > p {
+  width: 4em;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.incipit {
+  margin-bottom: 3em;
+
+  font-family: "Oswald";
+  font-size: 3em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+.incipit figure {
+  margin: 0;
+  font-family: "FacultyGlyphic";
+  font-size: .6em;
+}
+
+.incipit .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2em;
+  row-gap: 1em;
+}
+  
+
+.incipit p {
+  color: black;
+  font-family: "Oswald";
+  text-align: left;
+  font-size: .5em;
+  width: 20em;
+}
+
+.incipit .first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+
+  padding-top: 2em;
+}
+
+.incipit .first-section img {
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, .2);
+  transition: transform .5s;
+
+  cursor: pointer;
+}
+
+.incipit .first-section img:hover {
+  transform: scale(1.02);
+}
+
+.incipit button {
+  width: 7em;
+  height: 3em;
+  margin: 0em;
+  padding: 0em;
+  background-color: white;
+  border: .3em solid #2d564f;
+  border-radius: 1.5em;
+  transition: color .3s, background-color .3s;
+  transform: translateX(-120%);
+
+  font-family: "Oswald";
+  font-size: .4em;
+  color: #2d564f;
+
+  cursor: pointer;
+}
+
+.incipit button:hover {
+  background-color: #2d564f;
+  color: white;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.strip {
+  background-color: rgb(255, 230, 154);
+  margin-bottom: 2em;
+  height: 500px;
+  padding-left: 5em;
+  padding-right: 5em;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.strip .images img {
+  height: 100%;
+  width: 25em;
+  margin: 0px;
+}
+
+.strip .text{
+  width: 12em;
+
+  font-family: "Oswald";
+  color: #2d564f;
+  font-size: 2em;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.end {
+  font-family: "Oswald";
+  font-size: 3em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+.end .images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1em;
+  column-gap: 1em;
+}
+
+.end .image {
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.end img {
+  height: 300px;
+  width: 300px;
+}
+
+.end p {
+  padding: 0;
+  margin: 0;
+  color: white;
+
+  height: 400px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-350px);
+  transition: transform 1s, background-color 1s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end .image:hover p {
+  transform: translateY(-390px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.image2 {
+  background-image: url("first.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-size: cover; 
+  height: 120vh;
+  position: relative;
+  padding-bottom: 3em;
+
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.image2:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(255,255,255,1));
+}
+
+.image2 div {
+  width: 18em;
+}
+
+.image2 .text {
+  z-index: 13;
+  width: 100%;
+
+  color: white;
+  font-family: "Oswald";
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image2 input {
+  width: 16em;
+  height: 2em;
+  border-radius: 2em;
+  border: solid 1px rgb(79, 79, 79);
+  padding-left: 1em;
+
+  font-size: 1em;
+}
+.image2 button {
+  z-index: 13;
+	width: 10em;
+  height: 3em;
+  margin: 0;
+	transition: width 1s, background-color .5s, color .5s;
+	/* height: 2.5em; */
+	background-color: rgb(255, 255, 255, 0);
+	border: .3em solid white;
+  margin-top: 1em;
+	padding: .4em;
+	padding-bottom: .5em;
+  border-radius: 2em;
+
+	font-family: "FacultyGlyphic";
+  font-size: 1em;
+	color: white;
+
+  cursor: pointer;
+}
+
+.image2 button:hover {
+	background-color: white;
+	color: #2d564f;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+footer {
+  height: 4em;
+  font-family: "FacultyGlyphic";
+  background-color: #2d564f;
+  color: white;
+  border-top: .4em solid #24453f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+footer a {
+  text-decoration: underline;
+}

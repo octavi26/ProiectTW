@@ -1,0 +1,7 @@
+.image1, .image2 {
+  background-image: url("Paris.jpg");
+}
+
+.incipit .first-section img {
+  cursor: auto;
+}

@@ -1,0 +1,87 @@
+@media screen and (max-width: 50em) {
+    .image1 > .interactive >.text > .title {
+        font-size: 6em;
+    }
+
+    .image1 > .interactive >.text > .description {
+        font-size: 1.5em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .page {
+        display: grid;
+        grid-template-columns: 0fr 1fr 0fr;
+    }
+
+    .dropdown-content {
+        z-index: 13;
+        position: absolute;
+        background-color: #2d564f;
+        border-bottom: .4em solid #24453f;
+        width: 100%;
+        right: 0%;
+        top: 90%;
+        overflow: hidden;
+      
+        font-family: "FacultyGlyphic";
+        color: white;
+        font-size: 1.5em;
+      
+        cursor: pointer;
+    }
+
+    .image3 > .rectangle {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .image3 > .rectangle > .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1em;
+    }
+
+    .incipit .first-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2em;
+        width: 100%;
+      
+        padding-top: 2em;
+    }
+
+    .incipit p {
+        color: black;
+        font-family: "Oswald";
+        text-align: left;
+        font-size: .5em;
+        width: 14em;
+    }
+
+    .incipit button {
+        transform: translateX(0%);
+    }
+
+    .strip img {
+        display: none;
+    }
+
+    .image2 {
+        display: none;
+    }
+
+    footer {
+        font-size: .7em;
+        margin-top: 2em;
+    }
+}

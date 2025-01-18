@@ -1,0 +1,11 @@
+.data
+    x .long: 5
+
+.text
+.main
+main:
+
+return:
+    mov $1, %eax
+    mov $0, %ebx
+    int $0x80

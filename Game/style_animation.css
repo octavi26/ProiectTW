@@ -1,0 +1,36 @@
+.letter1 {
+	opacity: .5;
+}
+
+.letter1 {
+	animation-name: flicker;
+	animation-duration: 5s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flicker {
+	0%{color: black}
+	5%{color: black}
+	6%{color: white}
+
+	24%{color: white}
+	25%{color: black}
+	30%{color: black}
+	31%{color: white}
+	
+	37%{color: white}
+	38%{color: black}
+	43%{color: black}
+	44%{color: white}
+	
+	65%{color: white}
+	66%{color: black}
+	71%{color: black}
+	72%{color: white}
+	
+	93%{color: white}
+	94%{color: black}
+	99%{color: black}
+	100%{color: white}
+}

@@ -1,0 +1,73 @@
+/* ---------------------------------------------- */
+.chin {
+    animation-name: mouth;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mouth {
+    0%   {transform: translateY(0em);}
+    50%  {transform: translateY(-2em);}
+    100% {transform: translateY(0em);}
+}
+
+/* ---------------------------------------------- */
+.eye {
+    animation-name: look_around;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes look_around {
+    0%   {transform: translate(0em, 0em);}
+    25%  {transform: translate(.7em, -1em);}
+    50%  {transform: translate(-.7em, -1em);}
+    75%  {transform: translate(0em, 0em);}
+    100% {transform: translate(0em, 0em);}
+}
+
+/* ---------------------------------------------- */
+.eye_socket::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: -50%;
+    background: white;
+
+    animation-name: top_eyelid;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top_eyelid {
+    0%   {transform: translateY(0);}
+    90%  {transform: translateY(0);}
+    95%  {transform: translateY(100%);}
+    100% {transform: translateY(0);}
+}
+
+.eye_socket::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: -50%;
+    background: white;
+
+    animation-name: bottom_eyelid;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bottom_eyelid {
+    0%   {transform: translateY(0);}
+    90%  {transform: translateY(0);}
+    95%  {transform: translateY(-100%);}
+    100% {transform: translateY(0);}
+}

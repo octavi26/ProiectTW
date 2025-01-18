@@ -1,0 +1,9 @@
+@media screen and (max-width: 50em) {
+    header h1 {
+        justify-content: center;
+    }
+
+    .question, .answer {
+        width: 75%;
+    }
+}
