@@ -1,1 +1,1 @@
-Pagina care trebuie deschisa este:	Proiect/Site/home.html
+Pagina care trebuie deschisa este:	/Site/home.html
